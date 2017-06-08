@@ -31,19 +31,26 @@ var newCards = function(hand, amount){
 
 var checkWin = function(hand){
 	var score = 0;
-	for(i = 0; i > hand.length, i++){
-		score
+	for(var i = 0; i < hand.length; i++) {
+		var val = hand[i].value
+		if(val === "JACK" || val === "KING" || val === "QUEEN"){
+			score = score + 10
+		}else if(val === 'ACE'){
+			score = score + 11
+		}else score = score + Number(val)
 	}
-
+	console.log(score)
 }
 
 $('#dealBtn').click(function(){
 	if(playerHand.length === 0 & dealerHand.length === 0){
-		newCards(playerHand, 2)
-		newCards(dealerHand, 2)
-		console.log(playerHand)
-		console.log(dealerHand)
+		newCards(playerHand, 2);
+		newCards(dealerHand, 2);
+		console.log(playerHand);
+		console.log(dealerHand);
 	}
+	checkWin(playerHand);
+	checkWin(dealerHand);
 })
 
 $('#hitBtn').click(function(){
