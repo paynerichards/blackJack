@@ -1,0 +1,74 @@
+body{
+	background-color: #355436;
+}
+
+.top{
+	display: flex;
+	justify-content: space-around;
+}
+.deck{
+	background-color: #aaaaaa;
+	height: 200px;
+	width: 160px;
+}
+.dealerCards{
+	display: flex;
+	height: 200px;
+	width: 400px;
+
+}
+.card{
+	background-color: #cb3312;
+	height: 150px;
+	width: 120px;
+	margin: 10px;
+}
+.scoreBoard{
+
+}
+.scores{
+
+}
+.middle{
+	text-align: center;
+}
+h1{
+	color: white;
+}
+.bottom{
+	display: flex;
+	justify-content: space-around;
+}
+.interface{
+	display: flex;
+}
+.iFaceLeft{
+
+}
+.iFaceRight{
+	display: flex;
+	flex-direction: column;
+}
+.playerCards{
+	display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
