@@ -1,5 +1,5 @@
 body{
-	background-color: #355436;
+	background-image: url('../media/379.jpg');
 }
 
 .top{
@@ -18,8 +18,8 @@ body{
 
 }
 .card{
-	background-color: #cb3312;
-	height: 150px;
+/*	background-color: #cb3312;
+*/	height: 150px;
 	width: 120px;
 	margin: 10px;
 }
@@ -37,10 +37,11 @@ h1{
 }
 .bottom{
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 }
 .interface{
 	display: flex;
+	margin: 10px;
 }
 .iFaceLeft{
 
@@ -51,6 +52,8 @@ h1{
 }
 .playerCards{
 	display: flex;
+	height: 200px;
+	width: 400px;
 }
 
 
