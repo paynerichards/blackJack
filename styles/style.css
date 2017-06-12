@@ -40,7 +40,15 @@ body{
 }
 .middle{
 	text-align: center;
+	display: flex;
+	justify-content: center;
 }
+.midText{
+	background-color: #20305C;
+	border-radius: 5px;
+	padding: 10px;
+}
+
 h1, h3{
 	color: white;
 }
@@ -102,7 +110,18 @@ h1, h3{
 	border-radius: 5px;
 }
 
+.valCounterHolder{
+	display: flex;
+	align-items: center;
+}
 
+
+.valCounter{
+	background-color: white;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+}
 
 
 

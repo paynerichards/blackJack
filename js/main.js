@@ -21,6 +21,10 @@ var gambler = {
 	stand: false
 }
 
+var gamSplit = {
+	name: "split"
+}
+
 var dealer = {
 	name: 'dealer',
 	hand: [],
@@ -66,7 +70,7 @@ var emptyDeck = function(){
 
 
 var tallyScore = function(player){
-	player.score = 0;
+	player.score = 0
 	for(var i = 0; i < player.hand.length; i++) {
 		var val = player.hand[i].value
 		if(val === "JACK" || val === "KING" || val === "QUEEN"){
@@ -81,6 +85,7 @@ var tallyScore = function(player){
 		else player.score += Number(val)
 			
 	}console.log(player.name + " score: " + player.score)
+	$('.valCounter').text('Value: ' + gambler.score)
 }
 
 var checkWin = function(){
@@ -102,10 +107,13 @@ var checkWin = function(){
 var newRound = function(){
 	dealer.hand = [];
 	gambler.hand = [];
+	dealer.score = 0;
+	gambler.score = 0
 	newCards(gambler, 2);
 	newCards(dealer, 2);
 	gambler.stand = false;
 	gameOver = false;
+	;
 }
 
 var hideCard = function(){
@@ -153,6 +161,7 @@ $('#standBtn').click(function(){
 	if(dealer.score < 17 && gambler.score <= 21 && gameOver === false){
 		console.log('stand');
 		newCards(dealer, 1);
+		
 	}
 	else if( gameOver === false){
 		console.log('stand');
