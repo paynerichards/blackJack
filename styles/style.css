@@ -4,35 +4,44 @@ body{
 
 .top{
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	align-items: center;
 }
 .deck{
 	background-color: #aaaaaa;
 	height: 200px;
 	width: 160px;
+	border-radius: 5px;
 }
 .dealerCards{
 	display: flex;
-	height: 200px;
-	width: 400px;
+	margin-left: 10px;
+	flex-wrap: wrap;
+	align-items: center;
 
 }
-.card{
-/*	background-color: #cb3312;
-*/	height: 150px;
+.card, #hiddenCard{
+	height: 150px;
 	width: 120px;
-	margin: 10px;
+	margin: 5px;
 }
 .scoreBoard{
+	background-color: white;
+	height: 80px;
+	width: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	border-radius: 5px;
 
 }
 .scores{
-
+	text-align: center;
 }
 .middle{
 	text-align: center;
 }
-h1{
+h1, h3{
 	color: white;
 }
 .bottom{
@@ -42,21 +51,56 @@ h1{
 .interface{
 	display: flex;
 	margin: 10px;
+	height: 201px;
 }
 .iFaceLeft{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
 }
 .iFaceRight{
 	display: flex;
 	flex-direction: column;
+	height: 221px;
 }
-.playerCards{
+.gamblerCards{
 	display: flex;
-	height: 200px;
-	width: 400px;
+	margin-left: 20px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.btn {
+  background: #1a72ad;
+  background-image: -webkit-linear-gradient(top, #1a72ad, #032f4a);
+  background-image: -moz-linear-gradient(top, #1a72ad, #032f4a);
+  background-image: -ms-linear-gradient(top, #1a72ad, #032f4a);
+  background-image: -o-linear-gradient(top, #1a72ad, #032f4a);
+  background-image: linear-gradient(to bottom, #1a72ad, #032f4a);
+  -webkit-border-radius: 17;
+  -moz-border-radius: 17;
+  border-radius: 17px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 15px 25px 15px 25px;
+  text-decoration: none;
+  margin: 5px;
 }
 
+.btn:hover {
+  background: #9e1818;
+  background-image: -webkit-linear-gradient(top, #9e1818, #690f0f);
+  background-image: -moz-linear-gradient(top, #9e1818, #690f0f);
+  background-image: -ms-linear-gradient(top, #9e1818, #690f0f);
+  background-image: -o-linear-gradient(top, #9e1818, #690f0f);
+  background-image: linear-gradient(to bottom, #9e1818, #690f0f);
+  text-decoration: none;
+}
 
+#hiddenCard{
+	border-radius: 5px;
+}
 
 
 
