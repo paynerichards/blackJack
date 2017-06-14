@@ -121,10 +121,36 @@ h1, h3{
 	text-align: center;
 	padding: 5px;
 	border-radius: 5px;
+	display: none;
 }
-
-
-
+.splitCards{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.countSplit, .countDeal{
+	display: none;
+}
+.winScreen{
+	z-index: 10000;
+	color: white;
+	text-align: center;
+	position: fixed;
+	background-color: rgba(22, 104, 159, .98);
+	height: 300px;
+	width: 50%;
+	margin: auto;
+	top: 19%;
+	right: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 25px;
+	box-shadow: -5px 5px 15px 0px rgba(50, 50, 50, 0.6);
+}
+.winText{
+	font-size: 72px;
+}
 
 
 
