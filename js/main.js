@@ -173,6 +173,9 @@ var winDisplay = function(){
 	else if(winner.score > loser.score){
 		$('.reason').text(winner.name + ' has higher score')
 	}
+	else if(winner.score === loser.score){
+		$('.reason').text("Push")
+	}
 
 }
 
@@ -232,35 +235,4 @@ $('#splitBtn').click(function(){
 		gamSplit.valueDisplay.css("display", "inherit");		
 	}
 })
-
-
-
-
-// gambler.score < dealer.score &&
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
