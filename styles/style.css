@@ -1,5 +1,11 @@
+@font-face{
+	font-family: CardFont;
+	src: url(../media/cardcharacters/CARDC___.TTF);
+}
+
 body{
 	background-image: url('../media/379.jpg');
+	font-family: CardFont, serif;
 }
 
 .top{
@@ -28,11 +34,12 @@ body{
 .scoreBoard{
 	background-color: white;
 	height: 80px;
-	width: 80px;
+	width: 110px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	border-radius: 5px;
+	margin-left: 5px;
 
 }
 .scores{
@@ -44,6 +51,7 @@ body{
 	justify-content: center;
 }
 .midText{
+	font-family: CardFont, serif;
 	background-color: #20305C;
 	border-radius: 5px;
 	padding: 10px;
@@ -51,6 +59,12 @@ body{
 
 h1, h3{
 	color: white;
+}
+h1{
+	font-size: 50px;
+}
+h3{
+	padding: 0px 10px
 }
 .bottom{
 	display: flex;
@@ -70,7 +84,7 @@ h1, h3{
 .iFaceRight{
 	display: flex;
 	flex-direction: column;
-	height: 221px;
+	justify-content: center;
 }
 .gamblerCards{
 	display: flex;
@@ -88,7 +102,7 @@ h1, h3{
   -webkit-border-radius: 17;
   -moz-border-radius: 17;
   border-radius: 17px;
-  font-family: Arial;
+  font-family: CardFont, serif;
   color: #ffffff;
   font-size: 20px;
   padding: 15px 25px 15px 25px;
@@ -119,7 +133,7 @@ h1, h3{
 .valCounter{
 	background-color: white;
 	text-align: center;
-	padding: 5px;
+	padding: 10px;
 	border-radius: 5px;
 	display: none;
 }
@@ -147,9 +161,14 @@ h1, h3{
 	justify-content: center;
 	border-radius: 25px;
 	box-shadow: -5px 5px 15px 0px rgba(50, 50, 50, 0.6);
+	flex-direction: column;
 }
 .winText{
 	font-size: 72px;
+}
+.reason{
+	font-size: 24px;
+    padding-top: 17px;
 }
 
 

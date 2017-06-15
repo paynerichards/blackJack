@@ -13,7 +13,7 @@ var newDeck = function(){
 newDeck();
 
 var gambler = {
-	name: 'gambler',
+	name: 'Player',
 	hand: [],
 	score: 0,
 	handDisplay: $('.gamblerCards'),
@@ -34,7 +34,7 @@ var gamSplit = {
 }
 
 var dealer = {
-	name: 'dealer',
+	name: 'Dealer',
 	hand: [],
 	score: 0,
 	handDisplay: $('.dealerCards'),
@@ -48,6 +48,7 @@ var gameOver = false;
 var remain;
 
 var winner;
+var loser;
 
 var newCards = function(player, amount){
 	$.ajax({
@@ -109,18 +110,20 @@ var checkWin = function(){
 	if(gambler.score > 21 || (dealer.score > gambler.score && dealer.score <= 21) && gameOver === false){
 		console.log('dealer Win');
 		dealer.wins++
-		winner = "Dealer"
+		winner = dealer;
+		loser = gambler;
 		$('#dealerScore').text('Dealer: ' + dealer.wins)
 		gameOver = true;
 	}else if(dealer.score > 21 || (gambler.score >= dealer.score && gambler.score <= 21) && gameOver === false){
 		console.log('gambler Win');
 		gambler.wins++
 		$('#gamblerScore').text('Player: ' + gambler.wins)
-		winner = "Player";
+		winner = gambler;
+		loser = dealer;
 		gameOver = true;
 	}
 	dealer.valueDisplay.css('display', 'inherit')
-	winDisplay(winner)
+	winDisplay()
 }
 
 var newRound = function(){
@@ -159,8 +162,18 @@ var valDisplay = function(player){
 	player.valueDisplay.text('Value: ' + player.score)
 }
 
-var winDisplay = function(winner){
-	$('body').append('<div class="winScreen"><div class="winText">' + winner +' Wins!</div></div>')
+var winDisplay = function(){
+	$('body').append('<div class="winScreen"><div class="winText">' + winner.name +' Wins!</div><div class="reason"></div></div>')
+	if(winner.score === 21 && winner.hand.length === 2){
+		$('.reason').text('Blackjack!')
+	}
+	else if(loser.score > 21){
+		$('.reason').text(loser.name + ' busts')
+	}
+	else if(winner.score > loser.score){
+		$('.reason').text(winner.name + ' has higher score')
+	}
+
 }
 
 

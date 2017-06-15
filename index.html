@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Blackjack</title>
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto+Condensed" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 </head>
@@ -12,10 +13,11 @@
 				<img class="deck" id="deckImage" src='media/cardBack.jpg'>
 			</div>
 			<div class="dealerCards">
+				<div class="valCounterHolder">
+					<span class="valCounter countDeal"></span>
+				</div>
 			</div>
-			<div class="valCounterHolder">
-				<span class="valCounter countDeal"></span>
-			</div>
+			
 			<div class="scoreBoard">
 				<div id="gamblerScore" class="scores">Player: 0</div>
 				<div id="dealerScore" class="scores">Dealer: 0</div>
@@ -35,8 +37,8 @@
 				<div class='iFaceRight'>
 					<button class='btn' id="hitBtn">Hit</button>
 					<button class='btn' id="standBtn">Stand</button>
-<!-- 					<button class='btn' id='splitBtn'>Split</button>
- -->				</div>
+					<!-- <button class='btn' id='splitBtn'>Split</button> -->
+				</div>
 			</div>
 			<div class="gamblerCards">
 			</div>
